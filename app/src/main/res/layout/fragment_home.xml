@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_layout_fragment" >
+    </include>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <RelativeLayout
+            android:id="@+id/hsview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hs"
+            android:layout_width="match_parent"
+            android:background="@color/app_color"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+        <RelativeLayout
+            android:id="@+id/vp"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/hsview"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorAccent" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
